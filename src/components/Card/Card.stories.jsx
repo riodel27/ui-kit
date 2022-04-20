@@ -5,10 +5,9 @@ export default {
   component: Card,
 };
 
-export const Component = (args) => <Card {...args} />;
+const Template = (args) => <Card {...args} />;
 
-//todo: card arguments...
-// width,image,padding,border
-
-// how to use another external component here?
-// example: Button inside the Card component...
+export const Default = Template.bind({});
+Default.args = {
+  borderRadius: 4,
+};

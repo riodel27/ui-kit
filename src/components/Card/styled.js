@@ -16,9 +16,10 @@ export const CardBody = styled.div`
   flex-direction: column;
   min-height: 315px;
 
-  /* border-top-left-radius: 5%; */
+  /* border-radius: 5%; */
 
-  border-radius: 5%;
+  border-radius: ${(props) =>
+    props.borderRadius ? props.borderRadius + "%" : "5%"};
 
   img {
     height: auto;

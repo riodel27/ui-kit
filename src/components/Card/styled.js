@@ -9,12 +9,13 @@ export const CardBody = styled.div`
   margin: 25px 0;
   min-height: 515px;
   overflow: hidden;
-  width: 30%;
+
+  /* change width percentage based on device? */
+  width: 40%;
 
   display: flex;
   align-items: center;
-  flex-direction: column;
-  min-height: 315px;
+  flex-direction: ${(props) => props.flexDirection && props.flexDirection};
 
   /* border-radius: 5%; */
 
@@ -43,7 +44,7 @@ export const CardText = styled.div`
   p.tag {
     font-family: "Lato", sans-serif;
     font-size: 0.75rem;
-    color: #898989;
+    color: ${(props) => props.secondary};
     letter-spacing: 3px;
     margin-top: 5.5vh;
     text-transform: uppercase;
@@ -52,6 +53,7 @@ export const CardText = styled.div`
   h2 {
     font-size: 1.75rem;
     margin-top: 25px;
+    color: ${(props) => props.primary};
   }
 
   p.text {
@@ -59,6 +61,7 @@ export const CardText = styled.div`
     margin: 20px auto;
     text-align: center;
     width: 85%;
+    color: ${(props) => props.primary};
   }
 
   a.read-more {
